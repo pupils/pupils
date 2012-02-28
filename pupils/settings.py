@@ -1,4 +1,5 @@
 # Django settings for pupils project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -103,11 +104,14 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'pupils.urls'
 
+my_dir = os.popen("pwd", "r").read() 
+THIS_DIR = my_dir[0:(len(my_dir)-1)]
+
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    "/home/pupils/templates"
+    THIS_DIR + '/templates',
 )
 
 INSTALLED_APPS = (

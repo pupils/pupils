@@ -6,7 +6,7 @@ from pupils.settings import MEDIA_ROOT
 
 urlpatterns = patterns('',
     
-    url(r'^$', 'pupils.views.home', name='home'),
+    url(r'^$', 'pupils.views.working', name='working'),
     
 
     # Uncomment the admin/doc line below to enable admin documentation:

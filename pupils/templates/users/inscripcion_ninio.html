@@ -1,5 +1,8 @@
+{% extends "base.html" %}
 
+{% block title %}Inscripci—n de ni–@s{% endblock %}
 
+{% block content %}
 <form action="{% url inscripcion_ninio %}" method="post">
     <table>
        {{ form.as_table }}     
@@ -7,3 +10,5 @@
     
     <input type="submit" />
 </form>
+{% endblock %}
+

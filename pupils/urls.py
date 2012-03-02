@@ -21,12 +21,14 @@ Boston, MA 02111-1307, USA.
 
 from django.conf.urls.defaults import patterns, include, url
 from pupils.settings import MEDIA_ROOT
+from pupils.views import hora_actual
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
 urlpatterns = patterns('',
     
+	(r'ime/$',hora_actual),
     url(r'^$', 'pupils.views.working', name='working'),
     
 

@@ -20,6 +20,7 @@ Boston, MA 02111-1307, USA.
 """
 
 from django.http import HttpResponse
+from datetime import datetime
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 
@@ -29,3 +30,8 @@ def home(request):
 
 def working(request):
     return render_to_response('working.html',context_instance=RequestContext(request))
+def hora_actual (request) 
+    now = datetime.now()
+    html="Son las %s.", %now
+    return HttpResponse(html)
+

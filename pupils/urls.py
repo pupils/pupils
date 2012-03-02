@@ -29,6 +29,7 @@ from pupils.views import hora_actual
 urlpatterns = patterns('',
     
 	(r'time/$',hora_actual),
+	(r'^time/plus/(\d{1,2})/$',dentro_de),
     url(r'^$', 'pupils.views.working', name='working'),
     
 

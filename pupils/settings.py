@@ -24,7 +24,7 @@ Boston, MA 02111-1307, USA.
 
 import os
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -36,8 +36,8 @@ MANAGERS = ADMINS
 PROJECT_ROOT = os.path.dirname(__file__)
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
+        'ENGINE': 'sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'pupils',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -46,7 +46,7 @@ DATABASES = {
 }
 
 TIME_ZONE = 'Europe/Madrid'
-LANGUAGE_CODE = 'en-es'
+LANGUAGE_CODE = 'es-es'
 SITE_ID = 1
 
 USE_I18N = True
@@ -55,7 +55,7 @@ MEDIA_ROOT = os.path.join(PROJECT_ROOT,'media')
 MEDIA_URL = 'media'
 STATIC_ROOT = os.path.join(PROJECT_ROOT,'static')
 STATIC_URL = '/static/'
-ADMIN_MEDIA_PREFIX = '/static/admin/'
+ADMIN_MEDIA_PREFIX = '/admin/'
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT,'static')
 )

@@ -30,13 +30,17 @@ def home(request):
 
 def working(request):
     return render_to_response('working.html',context_instance=RequestContext(request))
+
 def hora_actual (request) :
     now = datetime.now()
     html="Son las %s." %now
     return HttpResponse(html)
-def dentro_de (request, offset) :
+
+def dentro_de (request, offset):
     offset = int(offset)
     dt = datetime.now() + timedelta(hours=offset)
     html="En %i horas,  seran las %s." %(offset, dt)
     return HttpResponse(html)
+
+
 

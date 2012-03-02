@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Copyright (C) 2012 Fco. Javier Lucena Lucena (https://forja.rediris.es/users/franlu/)
 Copyright (C) 2012 Serafín Vélez Barrera (https://forja.rediris.es/users/seravb/)

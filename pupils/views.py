@@ -21,6 +21,7 @@ Boston, MA 02111-1307, USA.
 
 from django.http import HttpResponse
 from datetime import datetime
+from datetime import timedelta
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 

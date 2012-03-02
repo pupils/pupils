@@ -22,6 +22,7 @@ Boston, MA 02111-1307, USA.
 from django.conf.urls.defaults import patterns, include, url
 from pupils.settings import MEDIA_ROOT
 from pupils.views import hora_actual
+from pupils.views import dentro_de
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()

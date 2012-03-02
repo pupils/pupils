@@ -28,7 +28,7 @@ from pupils.views import hora_actual
 
 urlpatterns = patterns('',
     
-	(r'ime/$',hora_actual),
+	(r'time/$',hora_actual),
     url(r'^$', 'pupils.views.working', name='working'),
     
 

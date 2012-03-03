@@ -23,8 +23,7 @@ Boston, MA 02111-1307, USA.
 
 
 import os
-
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (

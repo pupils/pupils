@@ -23,7 +23,7 @@ Boston, MA 02111-1307, USA.
 
 
 import os
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -52,11 +52,11 @@ USE_I18N = True
 USE_L10N = True
 MEDIA_ROOT = os.path.join(PROJECT_ROOT,'media')
 MEDIA_URL = 'media'
-STATIC_ROOT = os.path.join(PROJECT_ROOT,'static')
+STATIC_ROOT = '' #os.path.join(PROJECT_ROOT,'static')
 STATIC_URL = '/static/'
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT,'static')
+    #os.path.join(PROJECT_ROOT,'static')
 )
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -96,6 +96,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
+    'users',
+    'actividad',
+    'tablon',
 )
 
 # A sample logging configuration. The only tangible logging

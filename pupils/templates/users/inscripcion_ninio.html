@@ -3,12 +3,24 @@
 {% block title %}Inscripci—n de ni–@s{% endblock %}
 
 {% block content %}
-<form action="{% url inscripcion_ninio %}" method="post">
-    <table>
-       {{ form.as_table }}     
-    </table>
+<div class="row">
+    <form action="{% url inscripcion_ninio %}" method="post">
+     {% csrf_token %}
+        <div class="span4">
+            <table>
+               {{ form.as_table }}     
+            </table>
+        </div>
+</div>
+<div class="row">
+    <div class="span1 offset3">
+        <a href= "/"> volver</a>
+    </div>
+    <div class="span1">
+        <input type="submit" />
+    </div>
     
-    <input type="submit" />
 </form>
+</div>
 {% endblock %}
 

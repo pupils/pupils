@@ -23,17 +23,19 @@ from django.conf.urls.defaults import patterns, include, url
 from pupils.settings import MEDIA_ROOT
 from pupils.views import hora_actual
 from pupils.views import dentro_de
+#from pupils.users.views import inscripcion
 
 from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
     
-	(r'time/$',hora_actual),
-	(r'^time/plus/(\d{1,2})/$', dentro_de),
-    url(r'^$', 'pupils.views.working', name='working'),
+	url(r'time/$',hora_actual),
+	url(r'^time/plus/(\d{1,2})/$', dentro_de),
+    url(r'^inscripcion/(?P<idactividad>\d+)/$', 'pupils.users.views.inscripcion', name="inscripcion_padre"),
+    url(r'^$', 'pupils.views.home', name='home'),
     
-
+    
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
     

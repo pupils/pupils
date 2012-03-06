@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}/css/activity_wall.css" />
+        
+        <script type="text/javascript" src="{{MEDIA_URL}}/js/jquery.min.js"></script>
+        <script type="text/javascript" src="{{MEDIA_URL}}/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="{{MEDIA_URL}}/js/jquery.flip.min.js"></script>
+        
+		<script type="text/javascript" src="{{MEDIA_URL}}/js/activity_wall.js"></script>
+        
+        <title>{% block title %}PUPILS{% endblock %}</title>
+    </head>
+    
+    <body>
+		{% block top %}
+           <div class="top" align="center">
+				<h1>PUPILS CAMPUS</h1> 
+				<h3>Actividades</h3> 
+           </div>   
+        {% endblock %}
+		       
+        {% block content %}
+        
+			<div class="main" align="center">
+				<!--<h2>Actividades</h2>-->
+				
+				<div class="sponsorListHolder">
+				{% for a in actividades %}
+				<div class="sponsor" title="Click to flip">
+					<div class="sponsorFlip">
+						
+						<h2>{{ a.title }}</h2>					
+					</div>
+
+					<div class="sponsorData">
+						<div class="sponsorDescription">
+							<p>{{ a.descripcion }}</p>
+							<p> Ubicación: {{ a.place }}</p>
+						</div>
+					
+						<div class="sponsorURL">
+							<a href="#"> Incripción</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					
+				</div>
+				{% endfor %}
+				</div>
+				
+				
+            </div>
+           
+        {% endblock %}
+        
+        {% block footer %}
+           <!--<div align="center">
+				<a href="http://pupils.es">powered by PUPILS</a> 
+           </div> -->       
+        {% endblock %}
+        
+    </body>
+</html>

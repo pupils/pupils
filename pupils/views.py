@@ -25,8 +25,15 @@ from datetime import timedelta
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 
+from pupils.actividad.models import Actividad
+
 def home(request):
-    return HttpResponse("Bienvenido a PUPILS CAMPUS APP")
+	
+	act = Actividad.objects.all()
+	
+	context = {'actividades' : act,}
+	
+	return render_to_response('base.html',context,context_instance=RequestContext(request))
 
 
 def working(request):

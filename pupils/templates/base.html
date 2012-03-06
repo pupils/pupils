@@ -1,11 +1,75 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
     <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        <script type="text/javascript" src="/{{MEDIA_URL}}/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/{{MEDIA_URL}}/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/{{MEDIA_URL}}/js/jquery.flip.min.js"></script>
+        
+		<!-- CSSs -->
+		<!-- <script type="text/javascript" src="/{{MEDIA_URL}}/js/activity_wall.js"></script> -->
+		<!-- <link rel="stylesheet" type="text/css" href="/{{MEDIA_URL}}/css/activity_wall.css" /> -->
+		
+		    <!-- Bootstrap -->
+			<link href="/{{ MEDIA_URL }}/bootstrap/css/bootstrap.css" rel="stylesheet">
+			<link href="/{{ MEDIA_URL }}/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+			<link href="/{{ MEDIA_URL }}/css/style.css" rel="stylesheet">
+			<!-- <link href="assets/css/docs.css" rel="stylesheet">
+			<link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet"> -->
+		
+			<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+			<!--[if lt IE 9]>
+			  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<![endif]-->
+			
+			
+		
+        
         <title>{% block title %}PUPILS{% endblock %}</title>
     </head>
     
     <body>
-        {% block content %}
-            
+		<div class="container">
+			
+			<div class="row" align="center">
+				<div class="span12 titulo">
+					<h1>PUPILS CAMPUS</h1>
+				</div>
+            </div>
+		
+		{% block top %}
+		   <div class="row" align="center">
+				<div class="span12 subtitulo">
+					<h3>Actividades</h3>
+				</div>
+		   </div>
         {% endblock %}
+		
+		       
+        {% block content %}
+			<div class="row">
+				{% for a in actividades %}
+				<div class="span4 actividad">
+					<div class="paddingleft10">
+						<h2>{{ a.title }}</h2>					
+						<p>{{ a.descripcion }}</p>
+						<p>Ubicación: {{ a.place }}</p>
+						<a href="/inscripcion/{{ a.id }}/">Incripción</a>
+					</div>
+				</div>
+				{% endfor %}
+            </div>
+        {% endblock %}
+        
+        {% block footer %}
+           <div class="row" align="center">
+				<div class="span12 footer">
+				<a href="http://pupils.es">powered by PUPILS</a>
+				</div>
+           </div>      
+        {% endblock %}
+		</div>
     </body>
 </html>

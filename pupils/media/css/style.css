@@ -1,0 +1,37 @@
+
+.container{
+	margin-top: 10px;
+}
+
+.titulo {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #eeeebb;
+}
+
+.subtitulo{
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #eeeeee;
+}
+
+.actividad{
+    border-radius: 5px;
+	min-height: 160px;
+    background-color: #eeeeee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.footer{
+    border-radius: 5px;
+    background-color: #eeeebb;
+}
+
+.paddingleft10{
+    padding-left: 10px;
+}
+
+.prueba{
+	height: 600px;
+}

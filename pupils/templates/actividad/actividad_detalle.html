@@ -12,6 +12,7 @@
 
 {% if actividad %}
 <div class="row">
+	<div class="span4">
     <p>{{ actividad.descripcion }}</p>
     <p>{{ actividad.place }}</p>
     <p>{{ actividad.date_start }}</p>
@@ -22,6 +23,7 @@
     <p>{{ actividad.notes }}</p>
     <a href="#">Quiero inscribirme</a>
     <a href="/">Otras actividades</a>
+    </div>
 </div>
 {% else %}
 <div class="row">

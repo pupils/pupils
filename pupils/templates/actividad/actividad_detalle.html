@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Detalle de Actividad{% endblock %}
+
+{% block content %}
+
+{% if actividad %}
+<div class="row">
+    <p>{{ actividad.title }}</p>
+    <p>{{ actividad.descripcion }}</p>
+    <p>{{ actividad.place }}</p>
+    <p>{{ actividad.date_start }}</p>
+    <p>{{ actividad.date_end }}</p>
+    <p>{{ actividad.timetable }}</p>
+    <p>{{ actividad.age_range }}</p>
+    <p>{{ actividad.equipment }}</p>
+    <p>{{ actividad.notes }}</p>
+    <a href="#">Quiero inscribirme</a>
+    <a href="/">Otras actividades</a>
+</div>
+{% else %}
+<div class="row">
+    <p>No hay detalles para esta actividad.</p>
+    <a href="/">Otras actividades</a>
+</div>
+{% endif %}
+
+{% endblock %}

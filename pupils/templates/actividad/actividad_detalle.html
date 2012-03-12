@@ -1,12 +1,17 @@
 {% extends "base.html" %}
 
 {% block title %}Detalle de Actividad{% endblock %}
-
+{% block top %}
+		   <div class="row" align="center">
+				<div class="span12 subtitulo">
+					<h3>{{ actividad.title }}</h3>
+				</div>
+		   </div>
+        {% endblock %}
 {% block content %}
 
 {% if actividad %}
 <div class="row">
-    <p>{{ actividad.title }}</p>
     <p>{{ actividad.descripcion }}</p>
     <p>{{ actividad.place }}</p>
     <p>{{ actividad.date_start }}</p>

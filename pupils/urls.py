@@ -21,17 +21,12 @@ Boston, MA 02111-1307, USA.
 
 from django.conf.urls.defaults import patterns, include, url
 from pupils.settings import MEDIA_ROOT
-from pupils.views import hora_actual
-from pupils.views import dentro_de
-#from pupils.users.views import inscripcion
 
 from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
     
-	url(r'time/$',hora_actual),
-	url(r'^time/plus/(\d{1,2})/$', dentro_de),
     url(r'^inscripcion/(?P<idactividad>\d+)/$', 'pupils.users.views.inscripcion', name="inscripcion_padre"),
     url(r'^actividad/(?P<idactividad>\d+)/$', 'pupils.actividad.views.detalle', name="actividad_detalle"),
     url(r'^$', 'pupils.views.home', name='home'),

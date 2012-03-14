@@ -8,19 +8,15 @@ from users.models import Progenitor
 
 class ProgenitorForm(ModelForm):
 	username = forms.CharField(max_length=100)
-	email = forms.EmailField(max_length=100)
 	password = forms.CharField(widget=forms.PasswordInput)
 	password_confirm = forms.CharField(widget=forms.PasswordInput)
-	
+	email = forms.EmailField(max_length=100)
+	phone_a = forms.CharField(max_length=10)
+	phone_b = forms.CharField(max_length=10)
+
 	class Meta:
 		model = Progenitor
-		exclude = ["user"]
-		
-	#user = forms.CharField(max_length=100)
-	#fecha_nacimiento = forms.DateTimeField()
-	#profesion = forms.CharField(max_length=30)
-	#direccion = forms.CharField(max_length=100)
-	#observaciones = forms.TextField()
+		exclude = ["user","direccion","profesion", "observaciones"]
 
 class DescendienteForm(forms.Form):
 	pass

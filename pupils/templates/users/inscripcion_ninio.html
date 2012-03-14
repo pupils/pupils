@@ -1,10 +1,18 @@
 {% extends "base.html" %}
 
-{% block title %}Inscripci—n de ni–@s{% endblock %}
+{% block title %}Inscripcion de participantes{% endblock %}
+
+{% block top %}
+	   <div class="row" align="center">
+			<div class="span12 subtitulo">
+				<h3>Datos del participante.</h3>
+			</div>
+	   </div>
+{% endblock %}
 
 {% block content %}
 <div class="row">
-    <form action="{% url inscripcion_ninio %}" method="post">
+    <form action="#" method="post">
      {% csrf_token %}
         <div class="span4">
             <table>

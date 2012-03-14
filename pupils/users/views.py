@@ -7,8 +7,20 @@ from django.template.context import RequestContext
 from pupils.users.forms import ProgenitorForm
 
 def inscripcion(request, idactividad):
-	f = ProgenitorForm()
 	
+	if request.method == 'POST': 
+		f = ProgenitorForm(request.POST) 
+		if f.is_valid(): 
+			# crear usuario
+			# asociar usuario con actividad
+			# ...
+			print "Form OK"
+			return render_to_response('users/inscripcion_ninio.html',
+									  context_instance=RequestContext(request)
+							         )
+	else:
+		f = ProgenitorForm()
+        	
 	context= {
 	    'form': f,
 	}

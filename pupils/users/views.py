@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
-from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 
 from pupils.users.forms import ProgenitorForm, DescendienteForm
 
-def inscripcion(request, idactividad):
+def progenitor(request, idactividad):
 	
 	if request.method == 'POST': 
 		f = ProgenitorForm(request.POST) 
@@ -15,9 +15,8 @@ def inscripcion(request, idactividad):
 			# asociar usuario con actividad
 			# ...
 			print "Form OK"
-			return render_to_response('users/inscripcion_ninio.html',
-									  context_instance=RequestContext(request)
-							         )
+			url = "/actividad/nuevo/participante/%s/" % idactividad
+			return HttpResponseRedirect(url)
 	else:
 		f = ProgenitorForm()
         	
@@ -30,7 +29,7 @@ def inscripcion(request, idactividad):
 							  )
 
 
-def add_descendiente(request):
+def participante(request, idactividad):
 	
 	if request.method == 'POST': 
 		f = DescendienteForm(request.POST) 
@@ -39,7 +38,7 @@ def add_descendiente(request):
 			# asociar usuario con progenitor
 			# ...
 			print "Form OK"
-			return render_to_response('users/inscripcion_OK.html',
+			return render_to_response('users/inscripcion_done.html',
 									  context_instance=RequestContext(request)
 							         )
 	else:

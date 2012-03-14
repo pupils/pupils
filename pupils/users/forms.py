@@ -7,6 +7,8 @@ from django import forms
 from users.models import Progenitor
 
 class ProgenitorForm(ModelForm):
+	name = forms.CharField(max_length=100)
+	surname = forms.CharField(max_length=100)
 	username = forms.CharField(max_length=100)
 	password = forms.CharField(widget=forms.PasswordInput)
 	password_confirm = forms.CharField(widget=forms.PasswordInput)
@@ -19,10 +21,11 @@ class ProgenitorForm(ModelForm):
 		exclude = ["user","direccion","profesion", "observaciones"]
 
 class DescendienteForm(forms.Form):
-	pass
-	#user = forms.CharField(max_length=100)
-	#fecha_nacimiento = forms.DateTimeField()
-	#direccion = forms.CharField(max_length=100)
-	#progenitor = forms.ForeignKey(Progenitor)
-	#fecha_nacimiento = forms.DateTimeField()
-	#necesidades = forms.TextField()
+	name = forms.CharField(max_length=100)
+	surname = forms.CharField(max_length=100)
+	username = forms.CharField(max_length=100)
+	password = forms.CharField(widget=forms.PasswordInput)
+	password_confirm = forms.CharField(widget=forms.PasswordInput)
+	email = forms.EmailField(max_length=100)
+	birth_date = forms.DateField()
+	observation = forms.CharField(200)

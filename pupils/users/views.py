@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 
-from pupils.users.forms import ProgenitorForm
+from pupils.users.forms import ProgenitorForm, DescendienteForm
 
 def inscripcion(request, idactividad):
 	
@@ -31,6 +31,24 @@ def inscripcion(request, idactividad):
 
 
 def add_descendiente(request):
+	
+	if request.method == 'POST': 
+		f = DescendienteForm(request.POST) 
+		if f.is_valid(): 
+			# crear usuario
+			# asociar usuario con progenitor
+			# ...
+			print "Form OK"
+			return render_to_response('users/inscripcion_OK.html',
+									  context_instance=RequestContext(request)
+							         )
+	else:
+		f = DescendienteForm()
+        	
+	context= {
+	    'form': f,
+	}
+	
 	return render_to_response('users/inscripcion_ninio.html',
 							  context,
 							  context_instance=RequestContext(request))

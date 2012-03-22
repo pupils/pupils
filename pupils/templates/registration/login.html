@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Acceso{% endblock %}
+
+{% block top %}
+	   <div class="row" align="center">
+			<div class="span12 subtitulo">
+				<h3>Acceder a la aplicación</h3>
+			</div>
+	   </div>
+{% endblock %}
+
+{% block content %}
+	<div class="row">
+    <form action="." method="post">
+        {% csrf_token %}
+        <div class="span4">
+            <table>
+                {{ form.as_p }}
+            </table>
+            <div class="span1">
+				<input type="submit" value="Entrar" />
+			</div>
+        </div>
+	</form>
+    </div>
+{% endblock %}
+
+

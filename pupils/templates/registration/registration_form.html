@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Inscripcion de madres y padres{% endblock %}
+
+{% block top %}
+	   <div class="row" align="center">
+			<div class="span12 subtitulo">
+				<h3>Datos del Padre, Madre o Tutor.</h3>
+			</div>
+	   </div>
+{% endblock %}
+{% block content %}
+	<div class="row">
+    <form action="." method="post">
+        {% csrf_token %}
+        <div class="span4">
+            <table>
+                {{ form.as_p }}
+            </table>
+        <div class="row">
+			<div align="left" class="span1">
+			    <a href= "/"> volver</a>
+			</div>
+			<div class="span1">
+				<input type="submit" value="Registrar" />
+			</div>
+        </div>
+	</form>
+    </div>
+{% endblock %}

@@ -48,6 +48,16 @@ TIME_ZONE = 'Europe/Madrid'
 LANGUAGE_CODE = 'es-es'
 SITE_ID = 1
 
+#registration
+ACCOUNT_ACTIVATION_DAYS = 7
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'fran@pupils.es'
+EMAIL_HOST_PASSWORD = '12qwaszX'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+
+LOGIN_REDIRECT_URL = "/"
+
 USE_I18N = True
 USE_L10N = True
 MEDIA_ROOT = os.path.join(PROJECT_ROOT,'media')
@@ -96,6 +106,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
+    'registration',
     'users',
     'actividad',
     'tablon',

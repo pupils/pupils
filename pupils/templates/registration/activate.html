@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Proceso de activación {% endblock %}
+
+{% block top %}
+	   <div class="row" align="center">
+			<div class="span12 subtitulo">
+				<h3>Proceso de activación: ERROR</h3>
+			</div>
+	   </div>
+{% endblock %}
+
+{% block content %}
+
+    <p>No se ha podido activar su cuenta,
+    el código de activación es: {{ activation_key }}</p>
+
+{% endblock %}

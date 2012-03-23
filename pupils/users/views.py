@@ -3,12 +3,13 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
+from django.contrib.auth.decorators import login_required
 
 from pupils.users.forms import ProgenitorForm, DescendienteForm
 
 
 
-
+@login_required
 def panel(request):
 	
 	context= {

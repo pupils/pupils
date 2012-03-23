@@ -23,6 +23,7 @@ from django.views.generic.simple import direct_to_template
 
 from registration.views import activate
 from registration.views import register
+from pupils.users.forms import PadreExtraForm
 
 
 urlpatterns = patterns('',
@@ -38,9 +39,9 @@ urlpatterns = patterns('',
                            activate,
                            {'backend': 'registration.backends.default.DefaultBackend'},
                            name='registration_activate'),
-                       url(r'^registro/$',
+                       url(r'^registro/(?P<activity_key>\d+)/$',
                            register,
-                           {'backend': 'registration.backends.default.DefaultBackend'},
+                           {'backend': 'registration.backends.custom.DefaultBackend','form_class':PadreExtraForm},
                            name='registration_register'),
                        url(r'^registro/completado/$',
                            direct_to_template,

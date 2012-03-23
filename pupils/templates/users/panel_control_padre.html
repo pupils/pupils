@@ -15,27 +15,35 @@
 <div class="row">
 	<div class="span4">
 		<div class="paddingleft10">
-			<a href="#">Adjuntar justificante de pago</a>
+			<h4>Adjuntar justificante de pago</h4>
+			<a href="#"><img  title="Adjuntar justificante de pago" width="64" src="/{{ MEDIA_URL}}/img/pdf.png" /></a>
 		</div>
 	</div>
     <div class="span4">
 		<div class="paddingleft10">
-			<a href="#">Inscribir a hijo</a>
+			<h4>Inscribir a hija/o</h4>
+			<a href="#"><img title="Inscribir a hija/o" title="pdf" src="/{{ MEDIA_URL}}/img/add.png" /></a>
 		</div>
 	</div>
 	<div class="span4">
 		<div class="paddingleft10">
-			<a href="#">Ver actividades del hijo</a>
+			<div class="paddingleft10">
+				<h4>Ver actividades del hijo</h4>
+			    <a href="#"><img title="Ver actividades del hijo" width="64" height="64" src="/{{ MEDIA_URL}}/img/learn.png" /></a>
+		    </div>
 		</div>
 	</div>
 	<div class="span4">
 		<div class="paddingleft10">
-			<a href="#">Modificar datos de la cuenta</a>
+			<h4>Modificar datos de la cuenta</h4>
+			<a href="#"><img title="Modificar datos de la cuenta" title="pdf" src="/{{ MEDIA_URL}}/img/update.png" /></a>
+			
 		</div>
 	</div>
 	<div class="span4">
 		<div class="paddingleft10">
-			<a href="/usuario/logout/">Salir</a>
+			<h4>Salir</h4>
+			<a href="{% url logout %}"><img title="Salir" title="pdf" src="/{{ MEDIA_URL}}/img/exit.png" /></a>
 		</div>
 	</div>
 </div>

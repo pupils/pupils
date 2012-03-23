@@ -92,7 +92,7 @@ def activate(request, backend,
                               context_instance=context)
 
 
-def register(request, backend, success_url=None, form_class=None,
+def register(request,activity_key, backend, success_url=None, form_class=None,
              disallowed_url='registration_disallowed',
              template_name='registration/registration_form.html',
              extra_context=None):
@@ -184,7 +184,7 @@ def register(request, backend, success_url=None, form_class=None,
     if request.method == 'POST':
         form = form_class(data=request.POST, files=request.FILES)
         if form.is_valid():
-            new_user = backend.register(request, **form.cleaned_data)
+            new_user = backend.register(request, activity_key, **form.cleaned_data)
             if success_url is None:
                 to, args, kwargs = backend.post_registration_redirect(request, new_user)
                 return redirect(to, *args, **kwargs)

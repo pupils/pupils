@@ -5,6 +5,11 @@ from django.contrib.auth.models import User
 from django import forms
 
 from users.models import Progenitor
+from registration.forms import RegistrationForm
+
+class PadreExtraForm(RegistrationForm):
+	phone_m = forms.CharField(max_length=10)
+	phone_f = forms.CharField(max_length=10)
 
 class ProgenitorForm(ModelForm):
 	name = forms.CharField(max_length=100)

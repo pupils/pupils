@@ -21,8 +21,11 @@
     <p>{{ actividad.age_range }}</p>
     <p>{{ actividad.equipment }}</p>
     <p>{{ actividad.notes }}</p>
-    <a href="/usuario/registro/">Quiero inscribirme</a>
-    <a href="/">Otras actividades</a>
+    <a class="btn" href="/usuario/registro/{{actividad.id}}/">Quiero inscribirme</a>
+    <a class="btn" href="/">Otras actividades</a>
+    <div class="span4">
+		<br />
+	</div>
     </div>
 </div>
 {% else %}

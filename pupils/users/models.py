@@ -2,6 +2,32 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+from pupils.actividad.models import Actividad
+
+
+class Hijo(models.Model):
+    user = models.OneToOneField(User)
+    activity_id = models.IntegerField(null=False)
+    year = models.CharField(max_length='4')
+    observations = models.TextField()
+    
+class Padre(models.Model):
+    user = models.OneToOneField(User)
+    activity_id = models.IntegerField(null=False)
+    children = models.ManyToManyField(Hijo)
+    phone_f = models.CharField(max_length='10')
+    phone_m = models.CharField(max_length='10')
+
+"""
+class Monitor(models.Model):
+    user = models.OneToOneField(User)
+    activity = models.IntegerField(null=False)
+    
+class Profesor(models.Model):
+    user = models.OneToOneField(User)
+    activity = models.IntegerField(null=False)
+"""
+
 class Direccion(models.Model):
 	calle = models.CharField(max_length='100')
 	numero = models.CharField(max_length='5')

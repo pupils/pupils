@@ -6,6 +6,21 @@ from django.template.context import RequestContext
 
 from pupils.users.forms import ProgenitorForm, DescendienteForm
 
+
+
+
+def panel(request):
+	
+	context= {
+	    
+	}
+	
+	return render_to_response('users/panel_control_padre.html',
+							  context,
+							  context_instance=RequestContext(request))
+
+
+
 def progenitor(request, idactividad):
 	
 	if request.method == 'POST': 

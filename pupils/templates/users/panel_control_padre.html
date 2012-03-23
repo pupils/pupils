@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Información para el padre{% endblock %}
+
+{% block top %}
+	   <div class="row" align="center">
+			<div class="span12 subtitulo">
+				<h3>Panel de control para usuario:  {{ user.username }}</h3>
+			</div>
+	   </div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+	<div class="span1">
+		<a href="/usuario/logout/">Salir</a>
+	</div>
+</div>
+{% endblock %}

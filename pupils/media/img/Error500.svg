@@ -242,18 +242,18 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.29010301"
-     inkscape:cx="1595.587"
-     inkscape:cy="426.46704"
+     inkscape:zoom="0.41026761"
+     inkscape:cx="809.3911"
+     inkscape:cy="390.19633"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g4504"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-width="1366"
-     inkscape:window-height="744"
+     inkscape:window-height="714"
      inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-y="26"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -267,7 +267,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -537,36 +537,24 @@
        id="g4504"
        transform="translate(-660.48064,-369.703)">
       <flowRoot
-         transform="translate(732.20016,-2176.8289)"
-         style="font-size:64px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
-         id="flowRoot4466"
-         xml:space="preserve"><flowRegion
-           id="flowRegion4468"><rect
-             style="font-size:64px;font-weight:bold;-inkscape-font-specification:Sans Bold"
-             y="1216.0514"
-             x="633.47986"
-             height="581.55524"
-             width="1269.0367"
-             id="rect4470" /></flowRegion><flowPara
-           id="flowPara4476">Ha ocurrido algo interno en el servidor.</flowPara><flowPara
-           id="flowPara4480" /><flowPara
-           id="flowPara4824">Perdón por el problema.</flowPara><flowPara
-           id="flowPara4486" /><flowPara
-           id="flowPara4488" /></flowRoot>      <flowRoot
-         transform="matrix(1.3782422,0,0,1.3782422,545.33965,-2931.642)"
-         style="font-size:64px;font-style:normal;font-weight:bold;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+         transform="matrix(2.0070783,0,0,2.1726728,12.732273,-4606.465)"
+         style="font-size:64px;font-style:normal;font-weight:bold;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#bb3325;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
          id="flowRoot4490"
          xml:space="preserve"><flowRegion
            id="flowRegion4492"><rect
-             style="font-size:64px;font-style:normal;font-weight:bold;text-align:center;text-anchor:middle;-inkscape-font-specification:Sans Bold"
+             style="font-size:64px;font-style:normal;font-weight:bold;text-align:center;text-anchor:middle;-inkscape-font-specification:Sans Bold;fill:#bb3325;fill-opacity:1"
              y="1693.7576"
              x="735.25201"
              height="324.46213"
              width="343.89758"
              id="rect4494" /></flowRegion><flowPara
-           id="flowPara4496">Error 500</flowPara><flowPara
-           id="flowPara4498">Internal</flowPara><flowPara
-           id="flowPara4500">Server</flowPara><flowPara
-           id="flowPara4502">Error</flowPara></flowRoot>    </g>
+           id="flowPara4496"
+           style="fill:#bb3325;fill-opacity:1">Error 500</flowPara><flowPara
+           id="flowPara4498"
+           style="fill:#eae487;fill-opacity:1">Internal</flowPara><flowPara
+           id="flowPara4500"
+           style="fill:#eae487;fill-opacity:1">Server</flowPara><flowPara
+           id="flowPara4502"
+           style="fill:#eae487;fill-opacity:1">Error</flowPara></flowRoot>    </g>
   </g>
 </svg>

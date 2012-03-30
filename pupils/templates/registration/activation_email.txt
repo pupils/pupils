@@ -1,6 +1,6 @@
 Hola, bienvenido a {{ site }}.
 
-Por favor, active su cuenta en: {{ site }}/accounts/activate/{{ activation_key }}
+Por favor, active su cuenta en: {{ site }}/usuario/activacion/{{ activation_key }}
 
 ¡Gracias!
 

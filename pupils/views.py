@@ -39,10 +39,4 @@ def home(request):
 							  )
 
 
-def working(request):
-    return render_to_response('working.html',
-							  context_instance=RequestContext(request)
-							  )
-
-
 

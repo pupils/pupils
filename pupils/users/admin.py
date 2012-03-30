@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from pupils.users.models import Padre, Hijo
 from django.contrib import admin
+from pupils.users.models import Padre, Hijo
 
 admin.site.register(Padre)
 admin.site.register(Hijo)

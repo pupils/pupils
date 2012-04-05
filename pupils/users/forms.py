@@ -11,4 +11,4 @@ class PadreExtraForm(RegistrationForm):
 
 class HijoExtraForm(RegistrationForm):
 	year = forms.CharField(max_length=4)
-	observations = forms.TextField()
+	observations = forms.Textarea()

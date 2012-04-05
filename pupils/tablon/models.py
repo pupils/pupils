@@ -3,9 +3,6 @@ from django.db import models
 
 from django.contrib.auth.models import User
 
-from users.models import Progenitor
-from users.models import Descendiente
-
 from actividad.models import Actividad
 
 class Tag(models.Model):
@@ -18,7 +15,7 @@ class Post(models.Model):
     
     actividad = models.ForeignKey(Actividad) #Actividad con la que está relacionada
     # grupo = models.ManyToManyField(Grupo, null=True, blank=True)
-    descendientes = models.ManyToManyField(Descendiente, null=True, blank=True)
+    #descendientes = models.ManyToManyField(Descendiente, null=True, blank=True)
     
     date_creation = models.DateTimeField(auto_now_add=True)
     published_by = models.ForeignKey(User)

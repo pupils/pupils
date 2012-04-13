@@ -16,9 +16,11 @@
 	<div class="span4">
 		<div class="paddingleft10">
 			<h4>Seleccione fichero</h4>
-			
+			<form action="." method="POST">
+			{% csrf_token %}
 			{{ form.as_p }}
-			
+			<input type="submit" value="enviar"/>
+			</form>
 		</div>
 	</div>
 </div>

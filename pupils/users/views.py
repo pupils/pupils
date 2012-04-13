@@ -34,7 +34,7 @@ def upload_pdf(request):
 		form = UploadFileFrom(request.POST, request.FILES)
 		if forms.is_valid():
 			archivo_por_subir(request.FILES['file_id'])
-			return  True #HttpResponseRedirect('/pcontrol/')
+			return  HttpResponseRedirect('/pcontrol/')
 		else:
 			forms = UploadFileFrom()
 			return render_to_response('users/uploadpdf.html',{'form': forms})

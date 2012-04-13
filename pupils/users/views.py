@@ -31,7 +31,7 @@ def upload_pdf(request):
 			return  True #HttpResponseRedirect('/pcontrol/')
 		else:
 			forms = UploadFileFrom()
-			return render_to_response('archivo.html',{'form': forms})
+			return render_to_response('uploadpdf.html',{'form': forms})
 
 def archivo_por_subir(archivo):
 	destino = open('media/pagos/archivo.pdf','wb+')

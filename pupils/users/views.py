@@ -17,7 +17,6 @@ def panel(request):
 	return render_to_response('users/panel_control_padre.html',
 							  context,
 							  context_instance=RequestContext(request))
-
 class UploadFileFrom (forms.Form):
 	title = form.CharField(max_length=50)
 	file = form.FileField()

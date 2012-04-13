@@ -1,24 +1,18 @@
 # -*- coding: utf-8 -*-
 from django.db import models
-
 from django.contrib.auth.models import User
 
-from actividad.models import Actividad
-
-class Tag(models.Model):
-    title = models.CharField(max_length=50)
-    slug = models.SlugField(max_length=50)
+from users.models import Hijo 
 
 class Post(models.Model):
     title = models.TextField(null=True, blank=True) #Título
-    content = models.TextField() #Contenido de la entrada
+    content = models.TextField(null=True, blank=True) #Contenido de la entrada
+    url = models.URLField(max_length=200, null=True, blank=True)
     
-    actividad = models.ForeignKey(Actividad) #Actividad con la que está relacionada
-    # grupo = models.ManyToManyField(Grupo, null=True, blank=True)
-    #descendientes = models.ManyToManyField(Descendiente, null=True, blank=True)
+    hijo = models.ForeignKey(Hijo)
     
     date_creation = models.DateTimeField(auto_now_add=True)
     published_by = models.ForeignKey(User)
     
-    tags = models.ManyToManyField(Tag, null=True, blank=True)
+
     

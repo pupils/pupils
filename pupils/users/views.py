@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 from django.contrib.auth.decorators import login_required
@@ -31,13 +31,17 @@ class UploadFileFrom(forms.Form):
 def upload_pdf(request):
 	
 	if request.method == 'POST' :
-		form = UploadFileFrom(request.POST, request.FILES)
+		forms = UploadFileFrom(request.POST, request.FILES)
 		if forms.is_valid():
 			archivo_por_subir(request.FILES['file_id'])
 			return HttpResponseRedirect('/pcontrol/')
+		else:
+			
+			return HttpResponse("Payoooooo")
+						
 	else:
 		forms = UploadFileFrom()
-		return render_to_response('users/uploadpdf.html',{'form': forms}, context_instance=RequestContext(request))
+	return render_to_response('users/uploadpdf.html',{'form': forms}, context_instance=RequestContext(request))
 
 
 

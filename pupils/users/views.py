@@ -25,10 +25,16 @@ class UploadFileFrom(forms.Form):
 def upload_pdf(request):
 	
 	if request.method == 'POST' :
-		form = UploadFile(request.POST, request.FILES)
-		if form.is_valid():
+		form = UploadFileFrom(request.POST, request.FILES)
+		if forms.is_valid():
 			archivo_por_subir(request.FILES['file'])
 			return  True #HttpResponseRedirect('/pcontrol/')
 		else:
-			form = UploadFileFrom()
-			return render_to_response('archivo.html',{'form': form})
+			forms = UploadFileFrom()
+			return render_to_response('archivo.html',{'form': forms})
+
+def archivo_por_subir(archivo):
+	destino = open('media/pagos/archivo.pdf','wb+')
+	for chunk in archivo.chunks():
+		destination.write(chunk)
+		destino.close()

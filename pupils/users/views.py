@@ -17,17 +17,18 @@ def panel(request):
 	return render_to_response('users/panel_control_padre.html',
 							  context,
 							  context_instance=RequestContext(request))
-class UploadFileFrom (forms.Form):
-	title = form.CharField(max_length=50)
-	file = form.FileField()
+							  
+class UploadFileFrom(forms.Form):
+	title = forms.CharField(max_length=50)
+	file_id = forms.FileField()
 
-def upload_pdf (request):
+def upload_pdf(request):
 	
 	if request.method == 'POST' :
 		form = UploadFile(request.POST, request.FILES)
 		if form.is_valid():
-			archivo_por_subir(request.FILES['file']
-			return HttpResponseRedirect('Subida hecha con exito')
+			archivo_por_subir(request.FILES['file'])
+			return  True #HttpResponseRedirect('/pcontrol/')
 		else:
 			form = UploadFileFrom()
 			return render_to_response('archivo.html',{'form': form})

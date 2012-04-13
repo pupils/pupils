@@ -29,7 +29,7 @@ from pupils.actividad.models import Actividad
 
 def home(request):
 	
-	act = Actividad.objects.all()
+	act = Actividad.objects.order_by('-id')
 	
 	context = {'actividades' : act,}
 	

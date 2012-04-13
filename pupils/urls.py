@@ -30,6 +30,7 @@ urlpatterns = patterns('',
     url(r'^usuario/logout/$', 'django.contrib.auth.views.logout',{'next_page': '/'}, name="logout"),
     url(r'^usuario/', include('registration.backends.default.urls')),
     url(r'^pcontrol/', 'pupils.users.views.panel', name="panel"),
+    url(r'^pcontrol/uploadpdf/', 'pupils.users.views.upload_pdf', name="panel"),
     url(r'^actividad/(?P<idactividad>\d+)/$', 'pupils.actividad.views.detalle', name="actividad_detalle"),
     url(r'^$', 'pupils.views.home', name='home'),
     

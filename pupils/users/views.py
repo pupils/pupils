@@ -23,7 +23,7 @@ class UploadFileFrom(forms.Form):
 	file_id = forms.FileField()
 
 def upload_pdf(request):
-	print "te veo"
+	
 	if request.method == 'POST' :
 		form = UploadFileFrom(request.POST, request.FILES)
 		if forms.is_valid():

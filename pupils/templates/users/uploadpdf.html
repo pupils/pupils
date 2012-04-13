@@ -1,0 +1,23 @@
+% extends "base.html" %}
+
+{% block title %}Subiendo fichero de pago{% endblock %}
+
+{% block top %}
+	   <div class="row" align="center">
+			<div class="span12 subtitulo">
+				<h3>Subiendo fichero para usuario:  {{ user.username }}</h3>
+			</div>
+	   </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+	<div class="span4">
+		<div class="paddingleft10">
+			<h4>Seleccione fichero</h4>
+			<a href="/pcontrol/uploadpdf/"></a>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -18,6 +18,12 @@ def panel(request):
 							  context,
 							  context_instance=RequestContext(request))
 							  
+def archivo_por_subir(archivo):
+	destino = open('media/pagos/archivo.pdf','wb+')
+	for chunk in archivo.chunks():
+		destino.write(chunk)
+	destino.close()
+
 class UploadFileFrom(forms.Form):
 	title = forms.CharField(max_length=50)
 	file_id = forms.FileField()
@@ -34,8 +40,4 @@ def upload_pdf(request):
 			return render_to_response('users/uploadpdf.html',{'form': forms})
 
 
-def archivo_por_subir(archivo):
-	destino = open('media/pagos/archivo.pdf','wb+')
-	for chunk in archivo.chunks():
-		destino.write(chunk)
-	destino.close()
+

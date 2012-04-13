@@ -52,8 +52,12 @@
 
 
         {% block content %}
+		{% for a in actividades %}
+			{% if not forloop.last %}
+			{% if forloop.counter0|divisibleby:3 %}	
 			<div class="row">
-				{% for a in actividades %}
+			{% endif %}
+			{% endif %}
 				<div class="span4 actividad">
 					<div class="paddingleft10">
 						<h2>{{ a.title }}</h2>
@@ -63,8 +67,12 @@
 						<a class="btn" href="/usuario/registro/{{ a.id }}/">Incripción</a>
 					</div>
 				</div>
-				{% endfor %}
-            </div>
+			{% if not forloop.first %}
+			{% if forloop.counter|divisibleby:3 %}	
+		            </div>
+			{% endif %}
+			{% endif %}
+		{% endfor %}
         {% endblock %}
 
         {% block footer %}

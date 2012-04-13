@@ -37,5 +37,5 @@ def upload_pdf(request):
 def archivo_por_subir(archivo):
 	destino = open('media/pagos/archivo.pdf','wb+')
 	for chunk in archivo.chunks():
-		destination.write(chunk)
-		destino.close()
+		destino.write(chunk)
+	destino.close()

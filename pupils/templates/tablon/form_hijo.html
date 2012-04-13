@@ -3,12 +3,10 @@
         <title>Nueva entrada</title>
     </head>
     <body>
-        
-        <table>
-            <form>
-                {{ form.as_table }}
-            </form>
-        </table>
-        
+        <form action="." method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Crear"/>
+        </form>
     </body>
 </html>

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.http import HttpResponseRedirect
+from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 from django.contrib.auth.decorators import login_required
@@ -11,12 +12,16 @@ from tablon.forms import PostHijosForm
 def nuevo_post_hijo(request):
 
     if request.method == "POST":
-        form = PostHijosForm(request)
+        
+        form = PostHijosForm(request.POST)
         if form.is_valid():
-            pass
+            form.save()
+            return HttpResponse("Hecho correctamente.")
+                
         else:
-            pass
+            return HttpResponse("No realizado.")
     else:
+        
         form = PostHijosForm()
         context= {
             "form" : form,

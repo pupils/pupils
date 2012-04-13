@@ -23,15 +23,16 @@ class UploadFileFrom(forms.Form):
 	file_id = forms.FileField()
 
 def upload_pdf(request):
-	
+	print "te veo"
 	if request.method == 'POST' :
 		form = UploadFileFrom(request.POST, request.FILES)
 		if forms.is_valid():
-			archivo_por_subir(request.FILES['file'])
+			archivo_por_subir(request.FILES['file_id'])
 			return  True #HttpResponseRedirect('/pcontrol/')
 		else:
 			forms = UploadFileFrom()
-			return render_to_response('uploadpdf.html',{'form': forms})
+			return render_to_response('users/uploadpdf.html',{'form': forms})
+
 
 def archivo_por_subir(archivo):
 	destino = open('media/pagos/archivo.pdf','wb+')

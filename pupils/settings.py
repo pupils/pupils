@@ -57,6 +57,7 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 
 LOGIN_REDIRECT_URL = "/pcontrol/"
+URL_LOGIN = "/usuario/login/"
 
 USE_I18N = True
 USE_L10N = True

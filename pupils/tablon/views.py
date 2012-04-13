@@ -10,11 +10,10 @@ from tablon.forms import PostHijosForm
 @login_required
 def nuevo_post_hijo(request):
 
-    for i in range(20):
-        print "ok"
-
     form = PostHijosForm()
-    context= {}
+    context= {
+        "form" : form,
+    }
 
     return render_to_response('tablon/form_hijo.html',
                               context,

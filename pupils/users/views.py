@@ -39,8 +39,7 @@ def upload_pdf(request):
 			archivo_por_subir(request.FILES['file_id'])
 			return HttpResponseRedirect('/pcontrol/')
 		else:
-			
-			return HttpResponse("Payoooooo")
+			return render_to_response('users/uploadpdf.html',{'form': forms}, context_instance=RequestContext(request))
 						
 	else:
 		forms = UploadFileFrom()
@@ -54,18 +53,18 @@ def inscribir_hijo(request):
 		if forms.is_valid():
 			padre = Padre.objects.get(id=request.user.id)
 			print padre.user.username
-			
-			"""new_user = User()
-			new_user.password = request.POST['password']
+			new_user = User()
+			new_user.password = request.POST['password1']
 			new_user.username = request.POST['username']
+			new_user.email = request.POST['email']
 			new_user.activate = True
+			#new_user.save()
 			custom = Hijo(user=new_user)
-			custom.activity_id = 1
+			custom.activity_id = padre.activity_id
 			custom.year = request.POST['year']
 			custom.observations = request.POST['observations']
-			custom.save()
-			#asociar hijo a padre
-			#archivo_por_subir(request.FILES['file_id'])"""
+			#custom.save()
+			#padre.children 
 			return HttpResponseRedirect('/pcontrol/')
 		else:
 			context= {

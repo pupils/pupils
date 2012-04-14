@@ -10,5 +10,7 @@ class PadreExtraForm(RegistrationForm):
 	phone_f = forms.CharField(max_length=10)
 
 class HijoExtraForm(RegistrationForm):
+	name = forms.CharField()
+	surname = forms.CharField()
 	year = forms.CharField(max_length=4)
-	observations = forms.Textarea()
+	observations = forms.CharField()

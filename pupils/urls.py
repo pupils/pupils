@@ -31,6 +31,7 @@ urlpatterns = patterns('',
     url(r'^usuario/', include('registration.backends.default.urls')),
     
     url(r'^pcontrol/tablon/', include('tablon.urls')),
+    url(r'^pcontrol/inscripcion/$', 'pupils.users.views.inscribir_hijo', name="inscribir_hijo"),
     url(r'^pcontrol/$', 'pupils.users.views.panel', name="panel"),
     url(r'^pcontrol/uploadpdf/$', 'pupils.users.views.upload_pdf', name="upload_pdf"),
 

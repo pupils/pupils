@@ -5,7 +5,11 @@
 {% block top %}
 	   <div class="row" align="center">
 			<div class="span12 subtitulo">
-				<h3>Datos del Padre, Madre o Tutor.</h3>
+				{% if hijo %}
+					<h3>Datos del Hijo / Alumno.</h3>
+				{% else %}
+					<h3>Datos del Padre, Madre o Tutor.</h3>
+				{% endif %}
 			</div>
 	   </div>
 {% endblock %}
@@ -19,7 +23,7 @@
             </table>
         <div class="row">
 			<div align="left" class="span1">
-			    <a class="btn" href= "/"> volver</a>
+			    <a class="btn" href= "/pcontrol/"> volver</a>
 			</div>
 			<div class="span1">
 				<input type="submit" class="btn-success" value="Confirmar" />

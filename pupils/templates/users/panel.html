@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Información{% endblock %}
+
+{% block top %}
+	   <div class="row" align="center">
+			<div class="span12 subtitulo">
+				<h3>Panel de control para usuario:  {{ user.username }}</h3>
+			</div>
+	   </div>
+{% endblock %}
+
+{% block content %}
+
+{% if usuario == 'Padre' %}
+
+	{% include "users/panel_control_padre.html" %}
+
+{% endif %}
+
+{% if usuario == 'Hijo' %}
+
+	{% include "users/panel_control_hijo.html" %}
+
+{% endif %}
+
+{% endblock %}

@@ -14,11 +14,14 @@ from users.models import Padre, Hijo
 @login_required
 def panel(request):
 	
-	context= {
-	    
+	#hardcodeado
+	#siempre se muestra el panel control del Hijo
+	#para ver el del padre -> 'usuario':'Padre'
+	context= { 
+		'usuario': 'Hijo',  
 	}
 	
-	return render_to_response('users/panel_control_padre.html',
+	return render_to_response('users/panel.html',
 							  context,
 							  context_instance=RequestContext(request))
 							  
@@ -69,6 +72,17 @@ def inscribir_hijo(request):
 			hijo.save()
 			padre.children.add(hijo)
 			padre.save()
+			
+			"""from registration.models import RegistrationManager, RegistrationProfile
+			
+			new_profile = RegistrationManager()
+			new_profile.create_profile(new_user)
+			new_profile.activation_key = RegistrationProfile.ACTIVATED
+			
+			"""
+			signals.user_activated.send(sender='registration.backends.default.DefaultBackend',
+                                        new_user= new_user,
+                                        request = request)
 			
 			return HttpResponseRedirect('/pcontrol/')
 		else:

@@ -58,7 +58,7 @@ def inscribir_hijo(request):
 			new_user.first_name = request.POST['name']
 			new_user.last_name = request.POST['surname']
 			new_user.email = request.POST['email']
-			new_user.activate = True
+			new_user.is_active = True
 			new_user.save()
 			
 			hijo = Hijo(user=new_user)

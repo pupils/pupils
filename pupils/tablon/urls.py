@@ -27,4 +27,5 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'nuevo/$', 'pupils.tablon.views.nuevo_post_hijo', name="tablon_nuevo_post"),
+    url(r'$', 'pupils.tablon.views.tablon', name="tablon_home"),
 )

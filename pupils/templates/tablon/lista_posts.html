@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Tablón de -- ... --</title>
+    </head>
+    <body>
+        {% for post in posts %}
+            <div class=""><div class="span8">
+            {{ post.title }}
+            {{ post.content }}
+            {{ post.url }}
+            </div></div>
+        {% endfor %}
+        <!-- <form action="." method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Crear"/>
+        </form> -->
+    </body>
+</html>

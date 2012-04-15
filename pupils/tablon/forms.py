@@ -20,7 +20,7 @@ class PostHijosForm(ModelForm):
         else:
             instance.published_by = publisher
             
-            #siguiente l’nea es una CHAPUZA
+            #TODO siguiente l’nea es una CHAPUZA
             instance.hijo_id = 0
             done = instance.save()
         

@@ -7,7 +7,24 @@ from django.template.context import RequestContext
 from django.contrib.auth.decorators import login_required
 
 from tablon.forms import PostHijosForm
-from users.models import Hijo
+from users.models import Hijo, Padre
+from tablon.models import Post
+
+def tipo_usuario(user):
+    try:
+        hijo = user.hijo
+        return "hijo"
+    except Hijo.DoesNotExist:
+        pass
+    
+    try:
+        padre = user.padre
+        return "padre"
+    except Padre.DoesNotExist:
+        pass
+    
+    return None
+    
 
 @login_required
 def nuevo_post_hijo(request):
@@ -39,6 +56,21 @@ def nuevo_post_hijo(request):
         return render_to_response('tablon/form_hijo.html',
                                   context,
                                   context_instance=RequestContext(request))
+        
+@login_required
+def tablon(request):
+    if tipo_usuario(request.user) == "hijo":
+        posts = Post.objects.filter(hijo=request.user.hijo)
+    #elif tipo_usuario(request.user) == "padre":
+    #    posts = Post.objects.filter(hijo__in=request.user.padre.children)
     
+    #TODO PROVISIONAL
+    posts = Post.objects.all()
     
+    context = {
+        "posts" : posts,
+    }
     
+    return render_to_response('tablon/lista_posts.html',
+                              context,
+                              context_instance=RequestContext(request))

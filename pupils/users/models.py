@@ -24,9 +24,15 @@ class Hijo(models.Model):
     year = models.CharField(max_length='4')
     observations = models.TextField()
     
+    def __unicode__(self):
+		return "%s %s" % (self.user.first_name, self.user.last_name)
+    
 class Padre(models.Model):
     user = models.OneToOneField(User)
     activity_id = models.IntegerField(null=False)
     children = models.ManyToManyField(Hijo)
     phone_f = models.CharField(max_length='10')
     phone_m = models.CharField(max_length='10')
+    
+    def __unicode__(self):
+		return "%s %s" % (self.user.first_name, self.user.last_name)

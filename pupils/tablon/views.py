@@ -74,10 +74,12 @@ def nuevo_post_hijo(request):
 @login_required
 def tablon(request):
     posts = []
+    
     if tipo_usuario(request.user) == "hijo":
         posts = Post.objects.filter(hijo=request.user.hijo)
     elif tipo_usuario(request.user) == "padre":
-        posts = Post.objects.filter(hijo__in=request.user.padre.children)
+        posts = Post.objects.filter(hijo__in=request.user.padre.children.all())
+    
     
     context = {
         "posts" : posts,

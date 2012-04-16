@@ -12,10 +12,56 @@
 
 {% block content %}
     
+    {% if msg %}
+        <div class="row" align="center">
+        {% if correcto %}
+            <div class="offset2 span8 msg_correcto">
+        {% else %}
+            <div class="offset2 span8 msg_incorrecto">
+        {% endif %}
+            <span class="msg">{{ msg }}</span>
+            </div>
+        </div>
+    {% endif %}
+    
     <form action="." method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Crear"/>
+    {% csrf_token %}
+        <div class="row">
+            <div class="span3 alignright">
+                <label for="id_title">Título:</label>
+                {{ form.title.errors }}
+            </div>
+            <div class="span8">
+            {{ form.title }}
+            </div>
+        </div>
+        
+        <div class="row">    
+            <div class="span3 alignright">
+                <label for="id_content">Contenido:</label>
+                {{ form.content.errors }}
+            </div>
+            <div class="span8">
+            {{ form.content }}
+            </div>
+        </div>
+            
+        <div class="row">
+            <div class="span3 alignright">
+                <label for="id_url">URL:</label>
+                {{ form.url.errors }}
+            </div>
+            <div class="span8">
+            {{ form.url }}
+            </div>
+        </div>
+            
+        <div class="row">
+            <div class="offset3 span8">
+                <input type="submit" value="Crear" class="btn"/>
+            </div>
+        </div>
+    </div></div>
     </form>
     
 {% endblock %}

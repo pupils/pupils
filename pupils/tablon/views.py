@@ -40,13 +40,27 @@ def nuevo_post_hijo(request):
                 print "*"*20
                 print "No es un hijo"
                 print "*"*20
-            #print form.save()
-            print form.save(hijos=hijos, publisher=request.user)
-            return HttpResponse("Hecho correctamente.")
+
+            form.save(hijos=hijos, publisher=request.user)
+            
+            msg = "Has añadido un nuevo trabajo. ¡Bien hecho!"
+            correcto = True
+            form = PostHijosForm()
                 
         else:
-            return HttpResponse("No realizado.")
-    
+            msg = "Algo ha fallado. ¡Ten cuidado!"
+            correcto = False
+            
+        context = {
+            "form" : form,
+            "msg" : msg,
+            "correcto" : correcto,
+        }
+        
+        return render_to_response('tablon/form_hijo.html',
+                                  context,
+                                  context_instance=RequestContext(request))
+        
     else:    
         form = PostHijosForm()
         context= {

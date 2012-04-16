@@ -13,20 +13,15 @@
 {% block content %}
     {% for post in posts %}
         <div class="row post">
-            <div class="span12 post_title">
-            {{ post.title }}
+            <div class="offset2 span8 post_title">
+                <h4>{{ post.title }}</h4>
             </div>
-            <div class="span12 post_content">
-            {{ post.content }}
+            <div class="offset2 span8 post_content">
+                {{ post.content }}
             </div>
-            <div class="span12 post_url">
+            <div class="offset2 span8 post_url">
             <a href="{{ post.url }}">Enlace</a>
             </div>
         </div>
     {% endfor %}
-    <!-- <form action="." method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Crear"/>
-    </form> -->
 {% endblock %}

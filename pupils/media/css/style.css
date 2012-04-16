@@ -15,6 +15,24 @@
     background-color: #eeeeee;
 }
 
+.msg_correcto{
+	border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #33aa33;
+	color: #ffffff;
+}
+
+.msg_incorrecto{
+	border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #aa3333;
+	color: #ffffff;
+}
+
+.msg{
+	font-size: 1.5em;
+}
+
 .actividad{
     border-radius: 5px;
 	min-height: 160px;
@@ -32,10 +50,41 @@
     padding-left: 10px;
 }
 
+.alignright{
+	text-align: right;
+}
+
+
 .prueba{
 	height: 600px;
+}
+
+#id_title{
+	height: 20px;
+	width: 400px;
+}
+
+#id_content{
+	height: 100px;
+	width: 400px;
+}
+
+#id_url{
+	height: 20px;
+	width: 400px;	
 }
 
 .post{
 	margin-bottom: 20px;
 }
+
+.post_title{
+}
+
+.post_content{
+}
+
+.post_url{
+}
+
+

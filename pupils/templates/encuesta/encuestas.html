@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Tablón de -- ... --{% endblock %}
+    
+{% block top %}
+    <div class="row" align="center">
+        <div class="span12 subtitulo">
+            <h3>Encuestas</h3>
+        </div>
+   </div>
+{% endblock %}    
+    
+{% block content %}
+    {% for l in lista_encuestas %}
+        <div class="row post">
+            <div class="offset3 span6 post_title">
+                <h4 class="post_title_text">{{ l.titulo }}</h4>
+                <h4 class="post_title_text">{{ l.pub_date }}</h4>
+            </div>
+        </div>
+    {% endfor %}
+    <div class=" btn span1 offset3">
+				<a href= "/pcontrol/"> volver</a>
+	</div>
+{% endblock %}

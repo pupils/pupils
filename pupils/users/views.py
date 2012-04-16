@@ -58,8 +58,8 @@ def inscribir_hijo(request):
 		
 		if forms.is_valid():
 			new_user = User()
-			#user.set_password
-			new_user.password = request.POST['password1']
+			
+			new_user.set_password(request.POST['password1'])
 			new_user.username = request.POST['username']
 			new_user.first_name = request.POST['name']
 			new_user.last_name = request.POST['surname']

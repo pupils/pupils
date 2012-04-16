@@ -12,6 +12,7 @@ from forms import HijoExtraForm
 from users.models import Padre, Hijo
 
 from pupils.tablon.views import tipo_usuario
+from pupils.encuesta.models import Encuesta
 
 @login_required
 def panel(request):
@@ -113,6 +114,11 @@ def inscribir_hijo(request):
 
 def encuesta(request):
 	
-	return render_to_response('registration/registration_complete.html',
+	lista = Encuesta.objects.all()
+	context = {
+		'lista_encuestas': lista
+	}
+	
+	return render_to_response('encuesta/encuestas.html',
 							context, 
 							context_instance=RequestContext(request))

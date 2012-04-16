@@ -1,19 +1,32 @@
-<html>
-    <head>
-        <title>Tablón de -- ... --</title>
-    </head>
-    <body>
-        {% for post in posts %}
-            <div class=""><div class="span8">
+{% extends "base.html" %}
+
+{% block title %}Tablón de -- ... --{% endblock %}
+    
+{% block top %}
+    <div class="row" align="center">
+        <div class="span12 subtitulo">
+            <h3>Actividades de -- ... --</h3>
+        </div>
+   </div>
+{% endblock %}    
+    
+{% block content %}
+    {% for post in posts %}
+        <div class="row post">
+            <div class="span12 post_title">
             {{ post.title }}
+            </div>
+            <div class="span12 post_content">
             {{ post.content }}
-            {{ post.url }}
-            </div></div>
-        {% endfor %}
-        <!-- <form action="." method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="Crear"/>
-        </form> -->
-    </body>
-</html>
+            </div>
+            <div class="span12 post_url">
+            <a href="{{ post.url }}">Enlace</a>
+            </div>
+        </div>
+    {% endfor %}
+    <!-- <form action="." method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Crear"/>
+    </form> -->
+{% endblock %}

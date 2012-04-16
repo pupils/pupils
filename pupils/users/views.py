@@ -16,10 +16,6 @@ from pupils.tablon.views import tipo_usuario
 @login_required
 def panel(request):
 	
-	#hardcodeado
-	#siempre se muestra el panel control del Hijo
-	#para ver el del hijo -> 'usuario':'Hijo'
-	
 	entrando = tipo_usuario(request.user)
 	if entrando == None:
 		entrando = 'padre'

@@ -16,7 +16,7 @@ class PostHijosForm(ModelForm):
                 instance.hijo = hijo
                 instance.published_by = publisher
                 done = instance.save()
-                instance.id = none
+                instance.id = None
         else:
             instance.published_by = publisher
             

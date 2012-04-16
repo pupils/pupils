@@ -18,7 +18,7 @@ def panel(request):
 	#siempre se muestra el panel control del Hijo
 	#para ver el del hijo -> 'usuario':'Hijo'
 	context= { 
-		'usuario': 'Padre',  
+		'usuario': 'Hijo',  
 	}
 	
 	return render_to_response('users/panel.html',

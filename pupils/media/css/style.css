@@ -79,6 +79,17 @@
 }
 
 .post_title{
+	border-radius: 5px;
+    /*margin-bottom: 20px;*/
+    background-color: #55bb55;
+}
+
+.post_title_text{
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 1.5em;
+	color: #ffffff;
 }
 
 .post_content{

@@ -13,13 +13,13 @@
 {% block content %}
     {% for post in posts %}
         <div class="row post">
-            <div class="offset2 span8 post_title">
-                <h4>{{ post.title }}</h4>
+            <div class="offset3 span6 post_title">
+                <h4 class="post_title_text">{{ post.title }}</h4>
             </div>
-            <div class="offset2 span8 post_content">
+            <div class="offset3 span6 post_content">
                 {{ post.content }}
             </div>
-            <div class="offset2 span8 post_url">
+            <div class="offset3 span6 post_url">
             <a href="{{ post.url }}">Enlace</a>
             </div>
         </div>

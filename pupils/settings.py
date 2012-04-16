@@ -111,6 +111,7 @@ INSTALLED_APPS = (
     'users',
     'actividad',
     'tablon',
+    'encuesta',
 )
 
 # A sample logging configuration. The only tangible logging

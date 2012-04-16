@@ -11,14 +11,20 @@ from registration import signals
 from forms import HijoExtraForm
 from users.models import Padre, Hijo
 
+from pupils.tablon.views import tipo_usuario
+
 @login_required
 def panel(request):
 	
 	#hardcodeado
 	#siempre se muestra el panel control del Hijo
 	#para ver el del hijo -> 'usuario':'Hijo'
+	
+	entrando = tipo_usuario(request.user)
+	if entrando == None:
+		entrando = 'padre'
 	context= { 
-		'usuario': 'Hijo',  
+		'usuario': entrando,  
 	}
 	
 	return render_to_response('users/panel.html',
@@ -56,6 +62,7 @@ def inscribir_hijo(request):
 		
 		if forms.is_valid():
 			new_user = User()
+			#user.set_password
 			new_user.password = request.POST['password1']
 			new_user.username = request.POST['username']
 			new_user.first_name = request.POST['name']
@@ -108,3 +115,8 @@ def inscribir_hijo(request):
 	
 	
 
+def encuesta(request):
+	
+	return render_to_response('registration/registration_complete.html',
+							context, 
+							context_instance=RequestContext(request))

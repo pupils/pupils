@@ -1,29 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Información para el padre{% endblock %}
+
+{% block top %}
+	   <div class="row" align="center">
+			<div class="span12 subtitulo">
+				<h3>Panel de control para usuario:  {{ user.username }}</h3>
+			</div>
+	   </div>
+{% endblock %}
+
+{% block content %}
+
 <div class="row">
 	<div class="span4">
 		<div class="paddingleft10">
 			<h4>Adjuntar justificante de pago</h4>
-			<a href="/pcontrol/uploadpdf/"><img  title="Adjuntar justificante de pago" width="64" src="{{ MEDIA_URL}}/img/pdf.png" /></a>
+			<a href="#"><img  title="Adjuntar justificante de pago" width="64" src="{{ MEDIA_URL}}/img/pdf.png" /></a>
 		</div>
 	</div>
     <div class="span4">
 		<div class="paddingleft10">
 			<h4>Inscribir a hija/o</h4>
-			<a href="/pcontrol/inscripcion/"><img title="Inscribir a hija/o" title="pdf" src="{{ MEDIA_URL}}/img/add.png" /></a>
+			<a href="#"><img title="Inscribir a hija/o" title="pdf" src="{{ MEDIA_URL}}/img/add.png" /></a>
 		</div>
 	</div>
 	<div class="span4">
 		<div class="paddingleft10">
 			<div class="paddingleft10">
 				<h4>Ver actividades del hijo</h4>
-			    <a href="{% url tablon_home %}"><img title="Ver actividades del hijo" width="64" height="64" src="{{ MEDIA_URL}}/img/learn.png" /></a>
+			    <a href="#"><img title="Ver actividades del hijo" width="64" height="64" src="{{ MEDIA_URL}}/img/learn.png" /></a>
 		    </div>
-		</div>
-	</div>
-	<div class="span4">
-		<div class="paddingleft10">
-			<h4>Encuesta</h4>
-			<a href="#"><img title="Encuesta" title="pdf" width="64" height="64" src="{{ MEDIA_URL}}/img/encuesta_128x128.png" /></a>
-			
 		</div>
 	</div>
 	<div class="span4">
@@ -40,3 +47,4 @@
 		</div>
 	</div>
 </div>
+{% endblock %}

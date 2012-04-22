@@ -51,8 +51,8 @@ SITE_ID = 1
 #registration
 ACCOUNT_ACTIVATION_DAYS = 7
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'fran@pupils.es'
-EMAIL_HOST_PASSWORD = '12qwaszX'
+EMAIL_HOST_USER = 'no-reply@pupils.es'
+EMAIL_HOST_PASSWORD = 'pupilsapp'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 

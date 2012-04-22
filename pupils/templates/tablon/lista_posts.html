@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 
 {% block title %}Tablón de -- ... --{% endblock %}
-    
+
 {% block top %}
     <div class="row" align="center">
         <div class="span12 subtitulo">
             <h3>Actividades de -- ... --</h3>
         </div>
    </div>
-{% endblock %}    
-    
+{% endblock %}
+
 {% block content %}
     {% for post in posts %}
         <div class="row post">
@@ -25,6 +25,6 @@
         </div>
     {% endfor %}
     <div class=" btn span1 offset3">
-				<a href= "/pcontrol/"> volver</a>
+				<a href= "/pcontrol/">Volver</a>
 	</div>
 {% endblock %}

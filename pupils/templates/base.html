@@ -4,7 +4,6 @@
     <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<link rel="shortcut icon" href="{{MEDIA_URL}}/img/favicon.ico" />
-		<!--<link type="image/x-icon" href="favicon.ico" rel="icon" /> <!--use this line if the previous line don't work -->
 
         <script type="text/javascript" src="{{MEDIA_URL}}/js/jquery.min.js"></script>
         <script type="text/javascript" src="{{MEDIA_URL}}/js/jquery-ui.min.js"></script>
@@ -54,7 +53,7 @@
         {% block content %}
 		{% for a in actividades %}
 			{% if not forloop.last %}
-			{% if forloop.counter0|divisibleby:3 %}	
+			{% if forloop.counter0|divisibleby:3 %}
 			<div class="row">
 			{% endif %}
 			{% endif %}
@@ -68,7 +67,7 @@
 					</div>
 				</div>
 			{% if not forloop.first %}
-			{% if forloop.counter|divisibleby:3 %}	
+			{% if forloop.counter|divisibleby:3 %}
 		            </div>
 			{% endif %}
 			{% endif %}
@@ -78,7 +77,7 @@
         {% block footer %}
            <div class="row" align="center">
 				<div class="span12 footer">
-				<a href="http://pupils.es">powered by PUPILS</a>
+				<a href="http://pupils.es">Powered by PUPILS</a>
 				</div>
            </div>
         {% endblock %}

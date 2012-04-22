@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block content %}
-    
+
     {% if msg %}
         <div class="row" align="center">
         {% if correcto %}
@@ -23,7 +23,7 @@
             </div>
         </div>
     {% endif %}
-    
+
     <form action="." method="post">
     {% csrf_token %}
         <div class="row">
@@ -35,8 +35,8 @@
             {{ form.title }}
             </div>
         </div>
-        
-        <div class="row">    
+
+        <div class="row">
             <div class="span3 alignright">
                 <label for="id_content">Contenido:</label>
                 {{ form.content.errors }}
@@ -45,7 +45,7 @@
             {{ form.content }}
             </div>
         </div>
-            
+
         <div class="row">
             <div class="span3 alignright">
                 <label for="id_url">URL:</label>
@@ -55,18 +55,18 @@
             {{ form.url }}
             </div>
         </div>
-            
+
         <div class="row">
             <div class="offset3 span8">
                 <input type="submit" value="Crear" class="btn"/>
             </div>
         </div>
-        
+
     </form>
     <div class="row">
 			<div class="btn span1 offset3">
-				<a href= "/pcontrol/"> volver</a>
+				<a href= "/pcontrol/">Volver</a>
 			</div>
     </div>
-    
+
 {% endblock %}

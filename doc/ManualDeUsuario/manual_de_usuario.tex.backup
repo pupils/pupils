@@ -1,0 +1,64 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[pdftex]{graphicx}
+\usepackage{graphics}
+\usepackage[pdfborder=0]{hyperref}
+\usepackage{url}
+\usepackage{fancyhdr}
+%\usepackage{listings}
+
+
+% \title{HOW-TO: Instalación y Configuración de GNU/Linux en portátiles donados a la Oficina de Software Libre}
+\title{}
+\author{Serafín Vélez Barrera - Fco. Javier Lucena Lucena \\ {\href{mailto:serafin@pupils.es}{serafin@pupils.es}} -- {\href{mailto:fran@pupils.es}{fran@pupils.es}}}
+\date{\today}
+
+
+
+%Documento
+\begin{document}
+	\pagestyle{fancy}
+	\begin{center}
+		\Huge Manual de usuario de {\href{mailto:admin@pupils.es}{PUPILS}}
+	\end{center}
+
+	\begin{figure}[!ht]
+		\begin{center}
+			\includegraphics[scale=0.4, keepaspectratio=true]{./Imagenes/Logo/logo.pdf}
+		\end{center}
+		\maketitle
+		\begin{center}
+			\emph{\Large- El punto de encuentro entre niñ@s, profesores y padres -}
+		\end{center}
+	\end{figure}
+	\newpage
+
+	\tableofcontents
+	\newpage
+
+	\section{Introducción} \label{introduccion}
+		PUPILS nace de la unión de varias ideas, que fueron:
+		\\
+		\begin{itemize}
+			\item Necesidad de facilitar la administración y gestión de los Campus Infantiles de Software Libre que organiza la Oficina de Software Libre.
+			\item Idea de la creación de una aplicación simple de 
+		\end{itemize}
+
+	\newpage
+	
+	\section{Elementos} \label{elementos}
+	\newpage
+	
+	\section{¿Cómo se usa?} \label{como_se_usa}
+	\newpage
+	
+	\section{Referencias} \label{referencias}
+	\newpage
+
+
+	\section{Licencia}
+		\begin{center}
+			\href{http://creativecommons.org/licenses/by-nc-sa/3.0/es/}{\includegraphics[scale=0.7, keepaspectratio=true]{./Imagenes/Licencia/licencia.pdf}}
+		\end{center}
+\end{document}

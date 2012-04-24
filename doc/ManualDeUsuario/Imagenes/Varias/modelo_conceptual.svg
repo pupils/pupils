@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="55cm" height="35cm" viewBox="15 -3 1089 684" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="325" y="417" width="210.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="325" y="417" width="210.2" height="28"/>
+    <text style="fill: #000000;text-anchor:middle;font-size:16;font-family:sanserif;font-style:normal;font-weight:700" x="430.1" y="436">Hijo</text>
+    <rect style="fill: #ffffff" x="325" y="445" width="210.2" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="325" y="445" width="210.2" height="52"/>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="328" y="459">-activity_id: IntegerField</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="328" y="475">-year: CharField</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="328" y="491">-observations: TextField</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="17" y="417" width="210.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="17" y="417" width="210.2" height="28"/>
+    <text style="fill: #000000;text-anchor:middle;font-size:16;font-family:sanserif;font-style:normal;font-weight:700" x="122.1" y="436">Padre</text>
+    <rect style="fill: #ffffff" x="17" y="445" width="210.2" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="17" y="445" width="210.2" height="52"/>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="20" y="459">-activity_id: IntegerField</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="20" y="475">-phone_f: CharField</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="20" y="491">-phone_m: CharField</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="125" y="-1" width="217.9" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="125" y="-1" width="217.9" height="28"/>
+    <text style="fill: #000000;text-anchor:middle;font-size:16;font-family:sanserif;font-style:normal;font-weight:700" x="233.95" y="18">Usuario Registrado</text>
+    <rect style="fill: #ffffff" x="125" y="27" width="217.9" height="164"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="125" y="27" width="217.9" height="164"/>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="128" y="41">-first_name: char</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="128" y="57">-first_name: char</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="128" y="73">-last_name: char</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="128" y="89">-email: EmailField</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="128" y="105">-password: PasswordField</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="128" y="121">-is_staff: BooleanField</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="128" y="137">-is_active: BooleanField</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="128" y="153">-is_superuser: BooleanField</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="128" y="169">-last_login: DateField</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="128" y="185">-date_joined: DateField</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="233.95,209.236 233.95,304 122.1,304 122.1,417 "/>
+    <polygon style="fill: #ffffff" points="241.95,209.236 233.95,193.236 225.95,209.236 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="241.95,209.236 233.95,193.236 225.95,209.236 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="233.95,209.236 233.95,304 636.425,304 636.425,417 "/>
+    <polygon style="fill: #ffffff" points="241.95,209.236 233.95,193.236 225.95,209.236 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="241.95,209.236 233.95,193.236 225.95,209.236 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="593" y="417" width="86.85" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="593" y="417" width="86.85" height="28"/>
+    <text style="fill: #000000;text-anchor:middle;font-size:16;font-family:sanserif;font-style:normal;font-weight:700" x="636.425" y="436">Profesor</text>
+    <rect style="fill: #ffffff" x="593" y="445" width="86.85" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="593" y="445" width="86.85" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="732" y="417" width="80.35" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="732" y="417" width="80.35" height="28"/>
+    <text style="fill: #000000;text-anchor:middle;font-size:16;font-family:sanserif;font-style:normal;font-weight:700" x="772.175" y="436">Monitor</text>
+    <rect style="fill: #ffffff" x="732" y="445" width="80.35" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="732" y="445" width="80.35" height="8"/>
+    <rect style="fill: #ffffff" x="732" y="453" width="80.35" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="732" y="453" width="80.35" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="440" y="-1" width="187.1" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="440" y="-1" width="187.1" height="28"/>
+    <text style="fill: #000000;text-anchor:middle;font-size:16;font-family:sanserif;font-style:normal;font-weight:700" x="533.55" y="18">Actividad</text>
+    <rect style="fill: #ffffff" x="440" y="27" width="187.1" height="148"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="440" y="27" width="187.1" height="148"/>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="443" y="41">+title: TextField</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="443" y="57">+description: TextField</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="443" y="73">+place: TextField</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="443" y="89">+date_start: DateField</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="443" y="105">+date_end: DateField</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="443" y="121">+timetable: TextField</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="443" y="137">+age_range: CharField</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="443" y="153">+equipment: Textfield</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="443" y="169">+notes: TextField</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="342.9,101 440,101 440,101 "/>
+    <text style="fill: #000000;text-anchor:middle;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="391.45" y="97"></text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="346.9" y="97">N</text>
+    <text style="fill: #000000;text-anchor:end;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="436" y="97"></text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="233.95,209.236 233.95,303.497 772.175,303.497 772.175,415.994 "/>
+    <polygon style="fill: #ffffff" points="241.95,209.236 233.95,193.236 225.95,209.236 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="241.95,209.236 233.95,193.236 225.95,209.236 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="233.95,209.236 233.95,304 430.1,304 430.1,417 "/>
+    <polygon style="fill: #ffffff" points="241.95,209.236 233.95,193.236 225.95,209.236 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="241.95,209.236 233.95,193.236 225.95,209.236 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="227.2,455 276.1,455 276.1,455 325,455 "/>
+    <text style="fill: #000000;text-anchor:middle;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="276.1" y="451"></text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="231.2" y="451"></text>
+    <text style="fill: #000000;text-anchor:end;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="321" y="451">N</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="336" y="600.5" width="187.1" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="336" y="600.5" width="187.1" height="28"/>
+    <text style="fill: #000000;text-anchor:middle;font-size:16;font-family:sanserif;font-style:normal;font-weight:700" x="429.55" y="619.5">Entrada</text>
+    <rect style="fill: #ffffff" x="336" y="628.5" width="187.1" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="336" y="628.5" width="187.1" height="52"/>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="339" y="642.5">-title: CharField</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="339" y="658.5">-description: CharField</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="339" y="674.5">-URL: UrlField</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="430.1,497 430.1,548.75 429.55,548.75 429.55,600.5 "/>
+    <text style="fill: #ffffff;text-anchor:middle;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="429.825" y="544.75"></text>
+    <text style="fill: #ffffff;text-anchor:start;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="434.1" y="509"></text>
+    <text style="fill: #ffffff;text-anchor:start;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="433.55" y="596.5">N</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="715.3" y="-1" width="187.1" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="715.3" y="-1" width="187.1" height="28"/>
+    <text style="fill: #000000;text-anchor:middle;font-size:16;font-family:sanserif;font-style:normal;font-weight:700" x="808.85" y="18">Encuesta</text>
+    <rect style="fill: #ffffff" x="715.3" y="27" width="187.1" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="715.3" y="27" width="187.1" height="52"/>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="718.3" y="41">+title: TextField</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="718.3" y="57">+description: TextField</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="718.3" y="73">+notes: TextField</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="738.4" y="114.75" width="140.9" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="738.4" y="114.75" width="140.9" height="28"/>
+    <text style="fill: #000000;text-anchor:middle;font-size:16;font-family:sanserif;font-style:normal;font-weight:700" x="808.85" y="133.75">Pregunta</text>
+    <rect style="fill: #ffffff" x="738.4" y="142.75" width="140.9" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="738.4" y="142.75" width="140.9" height="20"/>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="741.4" y="156.75">+title: TextField</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="962.6" y="114.75" width="140.9" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="962.6" y="114.75" width="140.9" height="28"/>
+    <text style="fill: #000000;text-anchor:middle;font-size:16;font-family:sanserif;font-style:normal;font-weight:700" x="1033.05" y="133.75">Respuesta</text>
+    <rect style="fill: #ffffff" x="962.6" y="142.75" width="140.9" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="962.6" y="142.75" width="140.9" height="20"/>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="965.6" y="156.75">+title: TextField</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="627.1,53 627.1,53 715.3,53 715.3,53 "/>
+    <text style="fill: #000000;text-anchor:end;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="711.3" y="41"> N</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="808.85,79 808.85,79 808.85,114.75 808.85,114.75 "/>
+    <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="812.85" y="110.75"> N</text>
+  </g>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="879.3,128.75 932.5,128.75 932.5,128.75 962.6,128.75 "/>
+</svg>

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Encuesta{% endblock %}
+
+{% block top %}
+    <div class="row" align="center">
+        <div class="span12 subtitulo">
+            <h3>Encuesta: {{ titulo }}</h3>
+        </div>
+   </div>
+{% endblock %}
+
+{% block content %}
+    
+        <div class="row offset3">
+            <form action="." method="post">{% csrf_token %}
+            {% for p in preguntas %}
+            <p><label>{{ p.pregunta }}</label>
+				<textarea id="{{ p.id }}" rows="4" cols="50"></textarea></p>
+            {% endfor %}
+            <input type="submit" value="Enviar" />
+            </form>
+        </div>
+    
+    <div class=" btn span1 offset3">
+				<a href= "/pcontrol/">Volver</a>
+	</div>
+{% endblock %}

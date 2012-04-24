@@ -21,6 +21,8 @@ Boston, MA 02111-1307, USA.
 from django.db import models
 import datetime
 
+from pupils.encuesta.models import Encuesta
+
 class Actividad(models.Model):
 
 	title = models.TextField() 
@@ -32,3 +34,4 @@ class Actividad(models.Model):
 	age_range = models.CharField(max_length='100') 
 	equipment = models.TextField() 
 	notes = models.TextField()
+	#polls = models.ManyToManyField(Encuesta)

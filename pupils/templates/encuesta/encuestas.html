@@ -1,22 +1,21 @@
 {% extends "base.html" %}
 
-{% block title %}Tablón de -- ... --{% endblock %}
+{% block title %}Encuestas{% endblock %}
 
 {% block top %}
     <div class="row" align="center">
         <div class="span12 subtitulo">
-            <h3>Encuestas</h3>
+            <h3>Encuestas para el padre</h3>
         </div>
    </div>
 {% endblock %}
 
 {% block content %}
     {% for l in lista_encuestas %}
-        <div class="row post">
-            <div class="offset3 span6 post_title">
-                <h4 class="post_title_text">{{ l.titulo }}</h4>
-                <h4 class="post_title_text">{{ l.pub_date }}</h4>
-            </div>
+        <div class="row offset3">
+            
+             <a href="{{ url rellenar_encuesta }}">{{ l.titulo }}</a>
+            
         </div>
     {% endfor %}
     <div class=" btn span1 offset3">

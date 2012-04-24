@@ -34,7 +34,8 @@ urlpatterns = patterns('',
     url(r'^pcontrol/inscripcion/$', 'pupils.users.views.inscribir_hijo', name="inscribir_hijo"),
     url(r'^pcontrol/$', 'pupils.users.views.panel', name="panel"),
     url(r'^pcontrol/uploadpdf/$', 'pupils.users.views.upload_pdf', name="upload_pdf"),
-
+    
+    url(r'^pcontrol/encuesta/(?P<idencuesta>\d+)/$', 'pupils.encuesta.views.encuesta_rellenar', name="encuesta_rellenar"),
     url(r'^pcontrol/encuesta/$', 'pupils.users.views.encuesta', name="encuesta"),
     url(r'^actividad/(?P<idactividad>\d+)/$', 'pupils.actividad.views.detalle', name="actividad_detalle"),
     url(r'^$', 'pupils.views.home', name='home'),

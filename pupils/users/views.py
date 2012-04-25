@@ -10,9 +10,33 @@ from django import forms
 from registration import signals
 from forms import HijoExtraForm
 from users.models import Padre, Hijo
+#import ho.pisa as pisa
+import xhtml2pdf.pisa as pisa
+import cStringIO as StringIO
+import cgi
+from django.template.loader import render_to_string
+
+from registration import signals
+from forms import HijoExtraForm
+from users.models import Padre, Hijo
 
 from pupils.tablon.views import tipo_usuario
 from pupils.encuesta.models import Encuesta
+
+def generar_pdf(html):
+	# Función para generar el archivo PDF y devolverlo mediante HttpResponse
+	result = StringIO.StringIO()
+	pdf = pisa.pisaDocument(StringIO.StringIO(html.encode("UTF-8")), result)
+	if not pdf.err:
+		return HttpResponse(result.getvalue(), mimetype='application/pdf')
+	return HttpResponse('Error al generar el PDF: %s' % cgi.escape(html))
+
+def diploima_pdf(request):
+	# vista de ejemplo con un hipotético modelo Libro
+	# hijo=Hijo.objects.get(id=request.user.id)
+	hijo=Hijo.objects.get(id = 1)
+	html = render_to_string('diploma.html', {'pageorientation':'landscape','pagesize':'A4', 'hijo':hijo}, context_instance=RequestContext(request))
+	return generar_pdf(html)
 
 @login_required
 def panel(request):

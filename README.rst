@@ -18,7 +18,7 @@ Application for the management of any event related to educational, sports or le
 			y así de forma anónima nos descargamos el código fuente.
 
 ########################################################################
- 4.- Requisitos del proyecto.
+4.- Requisitos del proyecto.
 El proyecto necesita una máquina que tenga instalado Python (al menos 
 la versión 2.6 véase: http://www.python.org/download/ para descarga) y 
 Django (al menos la versión 1.3 véase: 

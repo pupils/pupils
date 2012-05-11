@@ -1,4 +1,4 @@
-PUPILS
+**PUPILS
 =======
 
 Application for the management of any event related to educational, sports or

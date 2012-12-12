@@ -7,3 +7,10 @@ leisure, in which the protagonists are children.
 
 * [Website] (http://pupils.es)
 * [Twitter] (https://twitter.com/pupilsproject)
+
+#### Contributors ####
+
+* [Serafín Vélez] (https://github.com/seravb)
+* [Álvaro Hurtado] (https://github.com/alvarohurtado84)
+* [Pablo Torres] (https://github.com/unmelon)
+* [Website] (http://pupils.es/colaboradores/)

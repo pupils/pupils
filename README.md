@@ -1,18 +1,15 @@
-**PUPILS
+PUPILS
 =======
 
 Application for the management of any event related to educational, sports or
 leisure, in which the protagonists are children.
 
-
-
-=======
-1.- Cómo obtener el proyecto.
-	Servidor propio de la aplicación en funcionamiento. Para hacer
+1. Cómo obtener el proyecto.
+	* Servidor propio de la aplicación en funcionamiento. Para hacer
 		uso de esta vía es cuestión de abrir el navegador y
-		dirigirse a la dirección web: http://app.pupils.es en donde
+		dirigirse a la dirección [web:] (http://app.pupils.es) en donde
 		está en funcionamiento el proyecto.
-	Mediante descarga del código fuente del proyecto de Github. Para
+	* Mediante descarga del código fuente del proyecto de Github. Para
 		descargar la última versión del proyecto, escribir en un
 		navegador la siguiente línea:
 			https://github.com/pupils/pupils/zipball/master
